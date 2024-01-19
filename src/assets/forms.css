@@ -1,0 +1,111 @@
+.publish-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.publish-container h1 {
+  color: #2baeb7;
+}
+.publish-input {
+  display: flex;
+  align-items: center;
+  width: 48%;
+}
+.publish-label {
+  width: 48%;
+}
+.publish-price {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #2baeb7;
+  border-radius: 5px;
+}
+.publish-price div {
+  width: 100%;
+}
+
+.publish-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding: 5px;
+  border-bottom: dashed 2px #2baeb7;
+}
+
+.publish-input > textarea {
+  resize: none;
+  width: 280px;
+  height: 100px;
+  border: solid 1px #2baeb7;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.submit-btn button,
+.btn-modal,
+::-webkit-file-upload-button {
+  background-color: #2baeb7;
+  border: solid 1px #2baeb7;
+  border-radius: 5px;
+  color: white;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
+}
+.sign-form input,
+.publish-input input {
+  border: solid 1px #2baeb7;
+  border-radius: 5px;
+  width: 250px;
+  margin-top: 10px;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-form-avatar img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.avatar-label {
+  color: #2baeb7;
+}
+.newsletter {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.publish-pic {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.publish-pic img {
+  height: 200px;
+}
+.publish-conection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.publish-conection h2 {
+  color: #2baeb7;
+  text-align: center;
+  font-size: 25px;
+}

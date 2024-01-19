@@ -1,0 +1,75 @@
+.home-hero {
+  height: 460px;
+  background-image: url(https://lereacteur-vinted.netlify.app/static/media/hero.2c66d85a1335550c4518.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.home-in-hero {
+  width: 410px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+}
+.home-in-hero button {
+  background-color: #2baeb7;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  height: 45px;
+  width: 190px;
+  margin: 32px 0 0;
+  padding: 0 14px;
+}
+
+.home-offer-container {
+  /* border: solid rebeccapurple; */
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.home-offer {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 50px) / 5);
+}
+.home-avatar-pic {
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 45px;
+}
+.home-avatar-pic img {
+  border-radius: 55%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-avatar-pic span {
+  font-size: 12px;
+  overflow: hidden;
+}
+.home-offer-pic {
+  /* border: solid green; */
+  height: 425px;
+  width: 100%;
+}
+.home-offer-pic img {
+  object-fit: cover;
+  margin-bottom: 15px;
+  height: 100%;
+  width: 100%;
+}
+.home-product-price {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
