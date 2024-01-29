@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 
 import CheckoutForm from "../components/CheckoutForm";
-import ProductPayment from "../components/productPayement";
+import ProductPayment from "../components/ProductPayement";
 
 const Payment = () => {
   const location = useLocation();
