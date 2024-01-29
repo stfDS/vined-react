@@ -46,7 +46,8 @@ const Publish = () => {
       formData.append("picture", picture);
       formData.append("size", size);
 
-      await axios.post(
+      // eslint-disable-next-line no-unused-vars
+      const response = await axios.post(
         `${import.meta.env.VITE_APP_BASE_URL}/offer/publish`,
         formData,
         {

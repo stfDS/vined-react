@@ -7,9 +7,13 @@ const Logout = () => {
   const { setUser, setIsAuthenticated } = useContext(AuthContext);
   const handleLogout = async () => {
     try {
-      await axios.delete(`${import.meta.env.VITE_APP_BASE_URL}/logout`, {
-        withCredentials: true,
-      });
+      // eslint-disable-next-line no-unused-vars
+      const response = await axios.delete(
+        `${import.meta.env.VITE_APP_BASE_URL}/logout`,
+        {
+          withCredentials: true,
+        }
+      );
       setIsAuthenticated(false);
       setUser(null);
       toast.success("A bientôt ✌🏼", {
