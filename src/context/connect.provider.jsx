@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState();
   const [update, setUpdate] = useState(false);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchuser = async () => {
@@ -39,6 +40,8 @@ export const AuthProvider = ({ children }) => {
         setUser,
         update,
         setUpdate,
+        search,
+        setSearch,
       }}
     >
       {children}

@@ -51,7 +51,7 @@ const ModalSigup = () => {
         <Signup closeModal={closeModal} />
 
         <button className="btn-modal" onClick={closeModal}>
-          close
+          fermer
         </button>
       </Modal>
     </div>

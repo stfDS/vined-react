@@ -68,7 +68,7 @@ const Publish = () => {
         <form>
           <CustomInput
             className="publish-file publish-form"
-            title="Photo de l' article"
+            title="Photo de l'article"
             label="file"
             type="file"
             setState={setPicture}
@@ -173,7 +173,7 @@ const Publish = () => {
   ) : (
     <main>
       <section className="publish-conection">
-        <h2>Connection</h2>
+        <h2>Connexion</h2>
         <Login />
         <h2>Inscription</h2>
         <Signup />

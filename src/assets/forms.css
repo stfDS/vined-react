@@ -54,7 +54,8 @@
 }
 .submit-btn button,
 .btn-modal,
-::-webkit-file-upload-button {
+::-webkit-file-upload-button,
+.payment-form button {
   background-color: #2baeb7;
   border: solid 1px #2baeb7;
   border-radius: 5px;
@@ -108,4 +109,40 @@
   color: #2baeb7;
   text-align: center;
   font-size: 25px;
+}
+.payment-card {
+  color: #2baeb7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-around;
+}
+.payment-card h2 {
+  font-size: 20px;
+}
+.payment-card-content {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+  width: 450px;
+}
+.payment-input {
+  margin-top: 10px;
+}
+.payment-form {
+  margin-top: 10px;
+}
+
+.payment-form ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.payment-form-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 400px;
 }

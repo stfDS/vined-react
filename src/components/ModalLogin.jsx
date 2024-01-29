@@ -34,7 +34,7 @@ const ModalLogin = () => {
   return (
     <div>
       <button className="btn-modal" onClick={openModal}>
-        Connection
+        Connexion
       </button>
       <Modal
         isOpen={modalIsOpen}
@@ -45,13 +45,13 @@ const ModalLogin = () => {
           className="description-title
         "
         >
-          Connection
+          Connexion
         </h3>
 
         <Login closeModal={closeModal} />
 
         <button className="btn-modal" onClick={closeModal}>
-          close
+          fermer
         </button>
       </Modal>
     </div>

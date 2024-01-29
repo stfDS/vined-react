@@ -24,6 +24,7 @@ const CustomInput = ({
   const additionalAttributes = {};
   if (label === "price") {
     additionalAttributes.min = "1";
+    additionalAttributes.max = "999";
   }
   return (
     <div className={className}>

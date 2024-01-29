@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -29,7 +30,16 @@ const Signup = () => {
           withCredentials: false,
         }
       );
-
+      toast.success("création de compte terminé", {
+        style: {
+          border: "1px solid #2baeb7",
+          padding: "10px",
+          color: "#2baeb7",
+        },
+        iconTheme: {
+          primary: "#2baeb7",
+        },
+      });
       navigate("/");
     } catch (error) {
       console.log(error);

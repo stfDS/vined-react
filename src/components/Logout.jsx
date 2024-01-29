@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/connect.provider";
+import toast from "react-hot-toast";
 
 const Logout = () => {
   const { setUser, setIsAuthenticated } = useContext(AuthContext);
@@ -14,6 +15,16 @@ const Logout = () => {
       );
       setIsAuthenticated(false);
       setUser(null);
+      toast.success("A bientôt ✌🏼", {
+        style: {
+          border: "1px solid #2baeb7",
+          padding: "10px",
+          color: "#2baeb7",
+        },
+        iconTheme: {
+          primary: "#2baeb7",
+        },
+      });
       console.log(response.data);
     } catch (error) {
       console.log(error);
@@ -22,7 +33,7 @@ const Logout = () => {
 
   return (
     <button className="btn-modal" onClick={handleLogout}>
-      Déconnection
+      Déconnexion
     </button>
   );
 };

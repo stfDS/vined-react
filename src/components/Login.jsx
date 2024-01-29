@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/connect.provider";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +24,16 @@ const Login = () => {
       );
       setIsAuthenticated(!isAuthenticated);
       setUser(response.data);
+      toast.success(`Bonjour ${response.data.account.username}`, {
+        style: {
+          border: "1px solid #2baeb7",
+          padding: "10px",
+          color: "#2baeb7",
+        },
+        iconTheme: {
+          primary: "#2baeb7",
+        },
+      });
     } catch (error) {
       console.log(error);
     }

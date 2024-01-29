@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -14,6 +14,11 @@ const Offer = () => {
   const [title, setTitle] = useState("");
   const params = useParams();
   const id = params.id;
+  const navigate = useNavigate();
+
+  const protectionFees = (price / 10).toFixed(2);
+  const shippingFees = (protectionFees * 2).toFixed(2);
+  const total = Number(price) + Number(protectionFees) + Number(shippingFees);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,10 +65,22 @@ const Offer = () => {
             })}
           </div>
           {/* <div><p>avatar a ajouter</p></div> */}
-          {!isAuthenticated ? (
-            <Link to="/payment" state={{ title: { title }, price: { price } }}>
-              <button>Acheter</button>
-            </Link>
+          {isAuthenticated ? (
+            <button
+              onClick={() => {
+                navigate("/payment", {
+                  state: {
+                    productName: title,
+                    totalPrice: total,
+                    protectionFees: protectionFees,
+                    shippingFees: shippingFees,
+                    price: price,
+                  },
+                });
+              }}
+            >
+              Acheter
+            </button>
           ) : (
             <ModalLogin />
           )}

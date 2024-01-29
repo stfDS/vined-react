@@ -8,7 +8,19 @@ import Logout from "./Logout";
 import { AuthContext } from "../context/connect.provider";
 
 const Header = () => {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, setSearch } = useContext(AuthContext);
+
+  const handleSearch = (event) => {
+    if (event.key === "Enter") {
+      setSearch(event.target.value);
+      console.log(event.target.value);
+    }
+  };
+  const handleChange = (event) => {
+    if (event.target.value === "") {
+      setSearch();
+    }
+  };
 
   return (
     <header>
@@ -20,7 +32,13 @@ const Header = () => {
           />
         </Link>
         <div className="serch">
-          <input type="text" placeholder="Recherche des articles" />
+          <input
+            id="searchbar"
+            type="search"
+            placeholder="Recherche des articles"
+            onKeyDown={handleSearch}
+            onChange={handleChange}
+          />
         </div>
         {isAuthenticated ? (
           <div className="deco-acount">
