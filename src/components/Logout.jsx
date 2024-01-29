@@ -7,7 +7,6 @@ const Logout = () => {
   const { setUser, setIsAuthenticated } = useContext(AuthContext);
   const handleLogout = async () => {
     try {
-      // eslint-disable-next-line no-unused-vars
       const response = await axios.delete(
         `${import.meta.env.VITE_APP_BASE_URL}/logout`,
         {
@@ -26,6 +25,7 @@ const Logout = () => {
           primary: "#2baeb7",
         },
       });
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
