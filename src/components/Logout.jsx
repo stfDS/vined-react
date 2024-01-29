@@ -7,12 +7,9 @@ const Logout = () => {
   const { setUser, setIsAuthenticated } = useContext(AuthContext);
   const handleLogout = async () => {
     try {
-      const response = await axios.delete(
-        `${import.meta.env.VITE_APP_BASE_URL}/logout`,
-        {
-          withCredentials: true,
-        }
-      );
+      await axios.delete(`${import.meta.env.VITE_APP_BASE_URL}/logout`, {
+        withCredentials: true,
+      });
       setIsAuthenticated(false);
       setUser(null);
       toast.success("A bientôt ✌🏼", {
@@ -25,7 +22,6 @@ const Logout = () => {
           primary: "#2baeb7",
         },
       });
-      console.log(response.data);
     } catch (error) {
       console.log(error);
     }

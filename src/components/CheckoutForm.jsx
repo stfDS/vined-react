@@ -6,9 +6,6 @@ import { AuthContext } from "../context/connect.provider";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-// const CheckoutForm = ({ title, price }) => {
-//   console.log({ title, price });
-
 const CheckoutForm = ({ productName, totalPrice }) => {
   const stripe = useStripe();
   const elements = useElements();

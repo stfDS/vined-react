@@ -25,7 +25,6 @@ const Home = () => {
               withCredentials: false,
             }
           );
-          console.log(response);
           setCount(response.data.count);
           setData(response.data);
           setIsLoading(false);

@@ -13,7 +13,6 @@ const Header = () => {
   const handleSearch = (event) => {
     if (event.key === "Enter") {
       setSearch(event.target.value);
-      console.log(event.target.value);
     }
   };
   const handleChange = (event) => {

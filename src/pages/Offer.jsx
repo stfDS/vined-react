@@ -52,7 +52,6 @@ const Offer = () => {
             <p>{dataOffer.product_price} €</p>
             {dataOffer.product_details.map((detail) => {
               const keysToFind = Object.keys(detail);
-              // console.log(keysToFind);
               const key = keysToFind[0];
               return (
                 <ul key={key}>
