@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 const ProductPayment = ({
   price,
   protectionFees,
@@ -23,7 +24,6 @@ const ProductPayment = ({
           </li>
         </ul>
       </div>
-      <div className="divider" />
       <div className="content">
         <ul>
           <li>

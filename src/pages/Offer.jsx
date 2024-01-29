@@ -63,7 +63,6 @@ const Offer = () => {
               );
             })}
           </div>
-          {/* <div><p>avatar a ajouter</p></div> */}
           {isAuthenticated ? (
             <button
               onClick={() => {
@@ -81,7 +80,10 @@ const Offer = () => {
               Acheter
             </button>
           ) : (
-            <ModalLogin />
+            <div className="log-payement">
+              <p>Connectez vous pour procéder au payement</p>
+              <ModalLogin />
+            </div>
           )}
         </div>
       </section>

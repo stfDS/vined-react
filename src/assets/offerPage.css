@@ -16,6 +16,7 @@
   width: 100%;
 }
 .offer-page-info {
+  width: 440px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -46,4 +47,12 @@
   width: 100%;
   margin: 32px 0 0;
   padding: 0 15px;
+}
+.log-payement {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.log-payement p {
+  font-size: 17px;
 }
