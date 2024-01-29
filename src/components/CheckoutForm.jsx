@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { useContext, useState } from "react";
@@ -86,3 +86,7 @@ const CheckoutForm = ({ productName, totalPrice }) => {
 };
 
 export default CheckoutForm;
+CheckoutForm.propTypes = {
+  productName: PropTypes.string.isRequired,
+  totalPrice: PropTypes.number.isRequired,
+};

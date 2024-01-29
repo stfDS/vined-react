@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 const ProductPayment = ({
   price,
   protectionFees,
@@ -36,3 +36,10 @@ const ProductPayment = ({
 };
 
 export default ProductPayment;
+
+ProductPayment.propTypes = {
+  price: PropTypes.number.isRequired,
+  protectionFees: PropTypes.number.isRequired,
+  shippingFees: PropTypes.number.isRequired,
+  totalPrice: PropTypes.number.isRequired,
+};
